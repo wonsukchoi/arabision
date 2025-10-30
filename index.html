@@ -23,10 +23,23 @@
         height: 100%;
         object-fit: cover;
       }
+      /* Hide mobile image by default, show only on mobile screens */
+      .cover-mobile {
+        display: none;
+      }
+      @media (max-width: 600px) {
+        .cover-desktop {
+          display: none;
+        }
+        .cover-mobile {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
-    <img class="cover" src="./arabision_construction.jpeg" alt="Arabision under construction" />
+    <img class="cover cover-desktop" src="./arabision_construction.jpeg" alt="Arabision under construction" />
+    <img class="cover cover-mobile" src="./arabision_mobile_construction.jpeg" alt="Arabision mobile under construction" />
   </body>
   </html>
 
